@@ -13,6 +13,53 @@ A flutter package to display a country, states, and cities. In addition it gives
 </table>
 </div>
 
+### GIF Previews
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 1 GIF" width="240" />
+      <br><b>Feature 1: Country Selection</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 2 GIF" width="240" />
+      <br><b>Feature 2: State Selection</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 3 GIF" width="240" />
+      <br><b>Feature 3: City Selection</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 4 GIF" width="240" />
+      <br><b>Feature 4: Search Feature</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 5 GIF" width="240" />
+      <br><b>Feature 5: Custom Layout</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 6 GIF" width="240" />
+      <br><b>Feature 6: Language Selection</b>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## New Features
+
+- **First package to support multilingual database:** The library provides a database for countries, states, and cities with support for multiple languages, including Arabic.
+- **Display countries and states in two languages:** You can display countries and states in Arabic or English (or the native language if English is not available).
+- **Display cities in the native language:** The library allows displaying cities in the country's native language.
+- **Search in two languages:** You can search for countries and states either in Arabic or English, enhancing user experience.
+- **Flexible location selection:** The library allows developers to configure the selection process based on their needs, enabling users to choose only the country, or the country and state, or the country, state, and city.
+- **Customizable display options:** You can customize the design and appearance of the dropdowns to fit your app’s requirements.
+<br>
+<br>
+
+
 ## How to Use
 
 To use this Package, add `csc_picker_plus` as a [dependency in your pubspec.yaml](https://flutter.io/platform-plugins/).
@@ -345,11 +392,11 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-### Contributor
+## Contributor
 
 **Hezbr Al-humaidi**  
 Email: [eng.hezbr@gmail.com](mailto:eng.hezbr@gmail.com)
 
 
 ### Special Thanks to
-- Altaf Razzaque, csc_picker [country_state_city_picker](https://github.com/ltafc22/csc_picker)
+- Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)

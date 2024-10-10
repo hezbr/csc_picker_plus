@@ -721,28 +721,17 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
       _selectedCountry = widget.countryStateLanguage == CountryStateLanguage.arabic? model.nameAr : model.name;
     }
 
-    // set the country name to corresponding name in the specified language
-    // if (widget.countryStateLanguage == CountryStateLanguage.arabic) {
-    //   model.name = model.nameAr;
-    // }
-
     if (!mounted) return;
     setState(() {
       if (widget.flagState == CountryFlag.ENABLE ||
           widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY) {
         if (widget.countryStateLanguage == CountryStateLanguage.arabic) {
           model.nameAr = "${model.emoji!}    ${model.nameAr!}";
-          // model.name = "${model.emoji!}    ${model.name!}";
         } else {
           model.name = "${model.emoji!}    ${model.name!}";
-          // model.nameAr = "${model.emoji!}    ${model.nameAr!}";
         }
       }
       _countryModels.add(model);
-      // widget.flagState == CountryFlag.ENABLE ||
-              // widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
-          // ? _country.add("${model.emoji!}    ${model.name!}") /* : _country.add(model.name)*/
-          // : _country.add(model.name);
     });
   }
 
@@ -753,16 +742,10 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
             widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
         ? response
             .map((map) => Country.fromJson(map))
-            .where((country) {
-              // String countryName = widget.countryStateLanguage == CountryStateLanguage.nativeOrEnglish ? country.name : country.nameAr;
-              return country.emoji + "    " + country.name == _selectedCountry || country.emoji + "    " + country.nameAr == _selectedCountry;
-            }).toList()
+            .where((country) => country.emoji + "    " + country.name == _selectedCountry || country.emoji + "    " + country.nameAr == _selectedCountry).toList()
         : response
             .map((map) => Country.fromJson(map))
-            .where((country) {
-              // String countryName = widget.countryStateLanguage == CountryStateLanguage.nativeOrEnglish ? country.name : country.nameAr;
-              return country.name == _selectedCountry || country.nameAr == _selectedCountry;
-            }).toList();
+            .where((country) => country.name == _selectedCountry || country.nameAr == _selectedCountry).toList();
   
     return country.cast<Country>();
   }
@@ -772,40 +755,13 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
     _statesModels.clear();
     var country = await getSelectedCountryData();
     var takeState = country.map((e) => e.state).toList();
-    // var response = await getResponse();
-    // var takeState = widget.flagState == CountryFlag.ENABLE ||
-    //         widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
-    //     ? response
-    //         .map((map) => Country.fromJson(map))
-    //         .where((country) {
-    //           String countryName = widget.countryStateLanguage == CountryStateLanguage.nativeOrEnglish ? country.name : country.nameAr;
-    //           return country.emoji + "    " + countryName == _selectedCountry;
-    //         })
-    //         .map((country) => country.state)
-    //         .toList()
-    //     : response
-    //         .map((map) => Country.fromJson(map))
-    //         .where((country) {
-    //           String countryName = widget.countryStateLanguage == CountryStateLanguage.nativeOrEnglish ? country.name : country.nameAr;
-    //           return countryName == _selectedCountry;
-    //         })
-    //         .map((item) => item.state)
-    //         .toList();
     var states = takeState as List;
     // log("Selected States:  ${states}");
 
     for (var f in states) {
       if (!mounted) continue;
       setState(() {
-        // var name = f.map((item) {
-        //   _statesModels.add(item);
-        //   return widget.countryStateLanguage == CountryStateLanguage.englishOrNative ? item.name : item.nameAr;
-        // }).toList();
         _statesModels.addAll(f);
-        // for (var stateName in name) {
-        //   //print(stateName.toString());
-        //   _states.add(stateName.toString());
-        // }
       });
     }
 
@@ -822,23 +778,7 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
     _cities.clear();
     var country = await getSelectedCountryData();
     var selectedStates = country.map((e) => e.state).toList();
-    // var response = await getResponse();
-    // var takeCity = widget.flagState == CountryFlag.ENABLE ||
-    //         widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
-    //     ? response
-    //         .map((map) => Country.fromJson(map))
-    //         .where((country) {
-    //             String countryName = widget.countryStateLanguage == CountryStateLanguage.nativeOrEnglish ? country.name : country.nameAr;
-    //             return country.emoji + "    " + countryName == _selectedCountry;
-    //          })
-    //         .map((item) => item.state)
-    //         .toList()
-    //     : response
-    //         .map((map) => Country.fromJson(map))
-    //         .where((item) => item.name == _selectedCountry)
-    //         .map((item) => item.state)
-    //         .toList();
-    // var selectedStates = selectedStates as List;
+
     for (var selectedState in selectedStates) {
       var state = selectedState?.where((item) {
         var stateName = widget.countryStateLanguage == CountryStateLanguage.englishOrNative ? item.name : item.nameAr;
@@ -861,7 +801,7 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
     return _cities;
   }
 
-  ///get methods to catch newly selected country state and city and populate state based on country, and city based on state
+  /// get methods to catch newly selected country state and city and populate state based on country, and city based on state
   void _onSelectedCountry(String value) {
     if (!mounted) return;
     setState(() {
@@ -964,43 +904,6 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
       ],
     );
   }
-
-  ///filter Country Data according to user input
-  // Future<List<String?>> getCountryData(filter) async {
-  //   var filteredList = _country
-  //       .where(
-  //           (country) => country!.toLowerCase().contains(filter.toLowerCase()))
-  //       .toList();
-  //   if (filteredList.isEmpty) {
-  //     return _country;
-  //   } else {
-  //     return filteredList;
-  //   }
-  // }
-
-  /// filter Sate Data according to user input
-  // Future<List<String?>> getStateData(filter) async {
-  //   var filteredList = _states
-  //       .where((state) => state!.toLowerCase().contains(filter.toLowerCase()))
-  //       .toList();
-  //   if (filteredList.isEmpty) {
-  //     return _states;
-  //   } else {
-  //     return filteredList;
-  //   }
-  // }
-
-  ///filter City Data according to user input
-  // Future<List<String?>> getCityData(filter) async {
-  //   var filteredList = _cities
-  //       .where((city) => city!.toLowerCase().contains(filter.toLowerCase()))
-  //       .toList();
-  //   if (filteredList.isEmpty) {
-  //     return _cities;
-  //   } else {
-  //     return filteredList;
-  //   }
-  // }
 
   ///Country Dropdown Widget
   Widget countryDropdown() {
