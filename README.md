@@ -7,24 +7,29 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 <table>
   <tr>
     <td align="center">
+      <br><br><br>
       <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif"  alt="Horizontal Layout" width="240" />
       <br><b>Horizontal Layout</b>
     </td>
     <td align="center">
+      <br><br><br>
       <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif"  alt="Show in Arabic Language" width="240" />
       <br><b>Show in Arabic Language</b>
     </td>
     <td align="center">
+      <br><br><br>
       <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/vertical%20view.gif"  alt="Vertical Layout" width="240" />
       <br><b>Vertical Layout</b>
     </td>
   </tr>
   <tr>
     <td align="center">
+      <br><br><br>
       <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20State%20Only%20View.gif"  alt="Country  and State Only" width="240" />
       <br><b>Country  and State Only</b>
     </td>
     <td align="center">
+      <br><br><br>
       <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20Only%20View.gif"  alt="Country Only" width="240" />
       <br><b>Country Only</b>
     </td>
