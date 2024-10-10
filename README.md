@@ -7,30 +7,26 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif"  alt="Feature 1 GIF" width="240" />
-      <br><b>Feature 1: Country Selection</b>
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif"  alt="Horizontal Layout" width="240" />
+      <br><b>Horizontal Layout</b>
     </td>
     <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 2 GIF" width="240" />
-      <br><b>Feature 2: State Selection</b>
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif"  alt="Show in Arabic Language" width="240" />
+      <br><b>Show in Arabic Language</b>
     </td>
     <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 3 GIF" width="240" />
-      <br><b>Feature 3: City Selection</b>
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/vertical%20view.gif"  alt="Vertical Layout" width="240" />
+      <br><b>Vertical Layout</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 4 GIF" width="240" />
-      <br><b>Feature 4: Search Feature</b>
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20State%20Only%20View.gif"  alt="Country  and State Only" width="240" />
+      <br><b>Country  and State Only</b>
     </td>
     <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 5 GIF" width="240" />
-      <br><b>Feature 5: Custom Layout</b>
-    </td>
-    <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 6 GIF" width="240" />
-      <br><b>Feature 6: Language Selection</b>
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20Only%20View.gif"  alt="Country Only" width="240" />
+      <br><b>Country Only</b>
     </td>
   </tr>
 </table>
