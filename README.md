@@ -7,7 +7,7 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true"  alt="Feature 1 GIF" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif"  alt="Feature 1 GIF" width="240" />
       <br><b>Feature 1: Country Selection</b>
     </td>
     <td align="center">
