@@ -1,19 +1,8 @@
 # csc_picker_plus 
-![version](https://img.shields.io/badge/version-0.2.6-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) 
+![version](https://img.shields.io/badge/version-0.0.1-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) 
 
-A flutter package to display a country, states, and cities. In addition it gives the possibility to select a list of countries, States and Cities depends on Selected, also you can search country, state, and city all around the world.
+A Flutter package for displaying a list of countries, states, and cities in Arabic, English, or the native language based on selection. It also allows users to search for countries, states, and cities worldwide.
 
-<div style="text-align:center">
-<table>
-<tr>
-<td><img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/horizontal_layout.gif?raw=true" alt="Horizontal Layout" width="240"/></td>
-<td><img src="https://github.com/altafc22/csc_picker/blob/master/screenshot/vertical_layout.gif?raw=true"  alt="Vertical Layout" width="240"/></td>
-
-</tr>
-</table>
-</div>
-
-### GIF Previews
 
 <table>
   <tr>
