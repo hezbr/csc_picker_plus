@@ -381,12 +381,20 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 ```
+<br>
+<br>
 
-## Contributor
+## Contact
 
-**Hezbr Al-humaidi**  
-Email: [eng.hezbr@gmail.com](mailto:eng.hezbr@gmail.com)
+For any inquiries or questions, please feel free to contact me:
 
+**Email:** [eng.hezbr@gmail.com](mailto:eng.hezbr@gmail.com)
+
+**GitHub:** [Hezbr Al-humaidi](https://github.com/hezbr)
+
+**GitHub:** [Hezbr Al-humaidi](www.linkedin.com/in/hezbr)
+
+<br>
 
 ### Special Thanks to
 - Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)

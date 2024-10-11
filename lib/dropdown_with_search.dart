@@ -73,11 +73,11 @@ class DropdownWithSearch<T> extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           decoration: !disabled
               ? decoration ?? BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderRadius: const BorderRadius.all(Radius.circular(5)),
                       color: Colors.white,
                       border: Border.all(color: Colors.grey.shade300, width: 1))
               : disabledDecoration ?? BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderRadius: const BorderRadius.all(Radius.circular(5)),
                       color: Colors.grey.shade300,
                       border:
                           Border.all(color: Colors.grey.shade300, width: 1)),
@@ -86,7 +86,7 @@ class DropdownWithSearch<T> extends StatelessWidget {
               Expanded(
                   child: Text(selected.toString(),
                       overflow: TextOverflow.ellipsis,
-                      style: selectedItemStyle ?? TextStyle(fontSize: 14))),
+                      style: selectedItemStyle ?? const TextStyle(fontSize: 14))),
               const Icon(Icons.keyboard_arrow_down_rounded)
             ],
           ),
@@ -196,7 +196,7 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                   margin: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     widget.title,
-                    style: widget.titleStyle ?? TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: widget.titleStyle ?? const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                 ),
                 IconButton(
@@ -247,7 +247,7 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                     borderSide: const BorderSide(color: Colors.black12),
                   ),
                 ),
-                style: widget.itemStyle ?? TextStyle(fontSize: 14),
+                style: widget.itemStyle ?? const TextStyle(fontSize: 14),
                 controller: textController,
               ),
             ),
@@ -271,7 +271,7 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                                 vertical: 10, horizontal: 18),
                             child: Text(
                               filteredList[index].toString(),
-                              style: widget.itemStyle ?? TextStyle(fontSize: 14),
+                              style: widget.itemStyle ?? const TextStyle(fontSize: 14),
                             ),
                           ));
                     }),
