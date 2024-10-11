@@ -47,7 +47,7 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 - **Flexible location selection:** The library allows developers to configure the selection process based on their needs, enabling users to choose only the country, or the country and state, or the country, state, and city.
 - **Customizable display options:** You can customize the design and appearance of the dropdowns to fit your app’s requirements.
 <br>
-<br>
+
 
 
 ## How to Use
@@ -201,6 +201,7 @@ you will get feedback in onChanged functions
     </tr>
   </tbody>
 </table>
+<br>
 
 ### Example
 
@@ -392,9 +393,9 @@ For any inquiries or questions, please feel free to contact me:
 
 **GitHub:** [Hezbr Al-humaidi](https://github.com/hezbr)
 
-**GitHub:** [Hezbr Al-humaidi](www.linkedin.com/in/hezbr)
+**LinkedIn:** [Hezbr Al-humaidi](www.linkedin.com/in/hezbr)
 
-<br>
+
 
 ### Special Thanks to
 - Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)
