@@ -41,7 +41,7 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 ## New Features
 
 - **First package to support multilingual database:** The library provides a database for countries, states, and cities with support for multiple languages, including Arabic.
-<br><br>
+
 <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif?raw=true"  alt="Show in Arabic Language" width="240" />
 <br><b>Show in Arabic Language</b><br><br>
 
