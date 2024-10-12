@@ -38,7 +38,7 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 
 <br>
 
-## New Features
+## **New Features**
 
 - **First package to support multilingual database:** The library provides a database for countries, states, and cities with support for multiple languages, including Arabic.
 
@@ -52,10 +52,9 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 - **Flexible location selection:** The library allows developers to configure the selection process based on their needs, enabling users to choose only the country, or the country and state, or the country, state, and city.
 - **Customizable display options:** You can customize the design and appearance of the dropdowns to fit your app’s requirements.
 <br>
+<br>
 
-
-
-## How to Use
+## **How to Use**
 
 To use this Package, add `csc_picker_plus` as a [dependency in your pubspec.yaml](https://flutter.io/platform-plugins/).
 
@@ -80,11 +79,12 @@ CSCPickerPlus(
   },
 ),
 ```
-you will get feedback in onChanged functions
+you will get feedback in onChanged functions.
 <br>
 <br>
 
-### Parameters
+
+### **Parameters**
 <table>
   <thead>
     <tr>
@@ -208,7 +208,7 @@ you will get feedback in onChanged functions
 </table>
 <br>
 
-### Example
+### **Example**
 
 ```dart
 import 'package:csc_picker_plus/csc_picker_plus.dart';
@@ -390,7 +390,7 @@ class _MyHomePageState extends State<MyHomePage> {
 <br>
 <br>
 
-## Contact
+## **Contact**
 
 For any inquiries or questions, please feel free to contact me:
 
@@ -402,5 +402,5 @@ For any inquiries or questions, please feel free to contact me:
 
 <br>
 
-### Special Thanks to
+### **Special Thanks to**
 - Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)

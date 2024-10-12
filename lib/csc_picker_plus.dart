@@ -267,15 +267,10 @@ enum CscCountry {
 }
 
 /// Enum for language selection for countries and states
-enum CountryStateLanguage {
-  arabic,
-  englishOrNative
-}
+enum CountryStateLanguage { arabic, englishOrNative }
 
 /// Enum for language selection for cities
-enum CityLanguage {
-  native
-}
+enum CityLanguage { native }
 
 const Map<CscCountry, int> Countries = {
   CscCountry.Afghanistan: 0,
@@ -658,12 +653,12 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
   Future<void> setDefaults() async {
     if (widget.currentCountry != null) {
       setState(() => _selectedCountry = widget.currentCountry);
-      if (widget.showStates)  await getStates();
+      if (widget.showStates) await getStates();
     }
 
     if (widget.currentState != null) {
       setState(() => _selectedState = widget.currentState!);
-      if (widget.showCities)  await getCities();
+      if (widget.showCities) await getCities();
     }
 
     if (widget.currentCity != null) {
@@ -674,7 +669,8 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
   void _setDefaultCountry() {
     if (widget.defaultCountry != null) {
       log(_countryModels[Countries[widget.defaultCountry]!]?.name ?? '');
-      _onSelectedCountry(_countryModels[Countries[widget.defaultCountry]!]!.name!);
+      _onSelectedCountry(
+          _countryModels[Countries[widget.defaultCountry]!]!.name!);
     }
   }
 
@@ -692,7 +688,7 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
     if (_countryFilter.isNotEmpty) {
       for (var element in _countryFilter) {
         var result = countries[Countries[element]!];
-        if(result!=null) addCountryToList(result);
+        if (result != null) addCountryToList(result);
       }
     } else {
       for (var data in countries) {
@@ -718,7 +714,10 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
 
     // change the selectedCountry to corresponding name in the specified language
     if (model.name == _selectedCountry || model.nameAr == _selectedCountry) {
-      _selectedCountry = widget.countryStateLanguage == CountryStateLanguage.arabic? model.nameAr : model.name;
+      _selectedCountry =
+          widget.countryStateLanguage == CountryStateLanguage.arabic
+              ? model.nameAr
+              : model.name;
     }
 
     if (!mounted) return;
@@ -742,11 +741,17 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
             widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY
         ? response
             .map((map) => Country.fromJson(map))
-            .where((country) => country.emoji + "    " + country.name == _selectedCountry || country.emoji + "    " + country.nameAr == _selectedCountry).toList()
+            .where((country) =>
+                country.emoji + "    " + country.name == _selectedCountry ||
+                country.emoji + "    " + country.nameAr == _selectedCountry)
+            .toList()
         : response
             .map((map) => Country.fromJson(map))
-            .where((country) => country.name == _selectedCountry || country.nameAr == _selectedCountry).toList();
-  
+            .where((country) =>
+                country.name == _selectedCountry ||
+                country.nameAr == _selectedCountry)
+            .toList();
+
     return country.cast<Country>();
   }
 
@@ -781,7 +786,10 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
 
     for (var selectedState in selectedStates) {
       var state = selectedState?.where((item) {
-        var stateName = widget.countryStateLanguage == CountryStateLanguage.englishOrNative ? item.name : item.nameAr;
+        var stateName =
+            widget.countryStateLanguage == CountryStateLanguage.englishOrNative
+                ? item.name
+                : item.nameAr;
         return stateName == _selectedState;
       });
       // log('States Names: ${state?.first.toJson()}');
@@ -808,7 +816,9 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
       if (widget.flagState == CountryFlag.SHOW_IN_DROP_DOWN_ONLY) {
         try {
           widget.onCountryChanged?.call(value.substring(6).trim());
-        } catch (e) {}
+        } catch (e) {
+          log('Error: $e');
+        }
       } else {
         widget.onCountryChanged?.call(value);
       }
@@ -816,15 +826,17 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
       if (value != _selectedCountry) {
         _statesModels.clear();
         _cities.clear();
-        _selectedState = widget.stateDropdownLabel.tr(widget.countryStateLanguage);
-        _selectedCity = widget.cityDropdownLabel.tr(widget.countryStateLanguage);
-        if (widget.showStates)  widget.onStateChanged?.call(null);
-        if (widget.showCities)  widget.onCityChanged?.call(null);
+        _selectedState =
+            widget.stateDropdownLabel.tr(widget.countryStateLanguage);
+        _selectedCity =
+            widget.cityDropdownLabel.tr(widget.countryStateLanguage);
+        if (widget.showStates) widget.onStateChanged?.call(null);
+        if (widget.showCities) widget.onCityChanged?.call(null);
         _selectedCountry = value;
-        if (widget.showStates)  getStates();
+        if (widget.showStates) getStates();
       } else {
-        if (widget.showStates)  widget.onStateChanged?.call(_selectedState);
-        if (widget.showCities)  widget.onCityChanged?.call(_selectedCity);
+        if (widget.showStates) widget.onStateChanged?.call(_selectedState);
+        if (widget.showCities) widget.onCityChanged?.call(_selectedCity);
       }
     });
   }
@@ -836,10 +848,11 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
       //code added in if condition
       if (value != _selectedState) {
         _cities.clear();
-        _selectedCity = widget.cityDropdownLabel.tr(widget.countryStateLanguage);
-        if (widget.showCities)  widget.onCityChanged?.call(null);
+        _selectedCity =
+            widget.cityDropdownLabel.tr(widget.countryStateLanguage);
+        if (widget.showCities) widget.onCityChanged?.call(null);
         _selectedState = value;
-        if (widget.showCities)  getCities();
+        if (widget.showCities) getCities();
       } else {
         if (widget.showCities) widget.onCityChanged?.call(_selectedCity);
       }
@@ -866,15 +879,16 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   countryDropdown(),
-                  widget.showStates? const SizedBox(
-                    height: 10.0,
-                  ) : Container(),
-                  widget.showStates? stateDropdown() : Container(),
-                  widget.showStates && widget.showCities? const SizedBox(
-                    height: 10.0,
-                  ) : Container(),
-                  widget.showStates && widget.showCities?
-                  cityDropdown() : Container()
+                  widget.showStates
+                      ? const SizedBox(height: 10.0)
+                      : Container(),
+                  widget.showStates ? stateDropdown() : Container(),
+                  widget.showStates && widget.showCities
+                      ? const SizedBox(height: 10.0)
+                      : Container(),
+                  widget.showStates && widget.showCities
+                      ? cityDropdown()
+                      : Container()
                 ],
               )
             : Column(
@@ -884,9 +898,7 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
                     children: <Widget>[
                       Expanded(child: countryDropdown()),
                       widget.showStates
-                          ? const SizedBox(
-                              width: 10.0,
-                            )
+                          ? const SizedBox(width: 10.0)
                           : Container(),
                       widget.showStates
                           ? Expanded(child: stateDropdown())
@@ -909,7 +921,8 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
   Widget countryDropdown() {
     return DropdownWithSearch(
       title: widget.countryDropdownLabel.tr(widget.countryStateLanguage),
-      placeHolder: widget.countrySearchPlaceholder.tr(widget.countryStateLanguage),
+      placeHolder:
+          widget.countrySearchPlaceholder.tr(widget.countryStateLanguage),
       selectedItemStyle: widget.selectedItemStyle,
       dropdownHeadingStyle: widget.dropdownHeadingStyle,
       itemStyle: widget.dropdownItemStyle,
@@ -923,7 +936,8 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
         return dropDownStringItem;
       }).toList(),
       isArabic: widget.countryStateLanguage == CountryStateLanguage.arabic,
-      selected: _selectedCountry ?? widget.countryDropdownLabel.tr(widget.countryStateLanguage),
+      selected: _selectedCountry ??
+          widget.countryDropdownLabel.tr(widget.countryStateLanguage),
       //selected: _selectedCountry != null ? _selectedCountry : "Country",
       //onChanged: (value) => _onSelectedCountry(value),
       onChanged: (value) {
@@ -939,7 +953,8 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
   Widget stateDropdown() {
     return DropdownWithSearch(
       title: widget.stateDropdownLabel.tr(widget.countryStateLanguage),
-      placeHolder: widget.stateSearchPlaceholder.tr(widget.countryStateLanguage),
+      placeHolder:
+          widget.stateSearchPlaceholder.tr(widget.countryStateLanguage),
       disabled: _statesModels.isEmpty ? true : false,
       items: _statesModels.map((dropDownStringItem) {
         return dropDownStringItem;

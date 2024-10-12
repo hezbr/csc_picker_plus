@@ -72,11 +72,13 @@ class DropdownWithSearch<T> extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           decoration: !disabled
-              ? decoration ?? BoxDecoration(
+              ? decoration ??
+                  BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(5)),
                       color: Colors.white,
                       border: Border.all(color: Colors.grey.shade300, width: 1))
-              : disabledDecoration ?? BoxDecoration(
+              : disabledDecoration ??
+                  BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(5)),
                       color: Colors.grey.shade300,
                       border:
@@ -86,7 +88,8 @@ class DropdownWithSearch<T> extends StatelessWidget {
               Expanded(
                   child: Text(selected.toString(),
                       overflow: TextOverflow.ellipsis,
-                      style: selectedItemStyle ?? const TextStyle(fontSize: 14))),
+                      style:
+                          selectedItemStyle ?? const TextStyle(fontSize: 14))),
               const Icon(Icons.keyboard_arrow_down_rounded)
             ],
           ),
@@ -130,7 +133,7 @@ class _SearchDialogState<T> extends State<SearchDialog> {
   @override
   void initState() {
     log(widget.items.runtimeType.toString());
-    if (widget.items is List<String?>){
+    if (widget.items is List<String?>) {
       filteredList = widget.items;
       textController.addListener(() {
         setState(() {
@@ -147,23 +150,29 @@ class _SearchDialogState<T> extends State<SearchDialog> {
         });
       });
     } else {
-      filteredList = widget.items.map((e) => widget.displayArabic == true? e.nameAr : e.name).toList();
+      filteredList = widget.items
+          .map((e) => widget.displayArabic == true ? e.nameAr : e.name)
+          .toList();
       textController.addListener(() {
         setState(() {
           if (textController.text.isEmpty) {
-            filteredList = widget.items.map((e) => widget.displayArabic == true? e.nameAr : e.name).toList();
+            filteredList = widget.items
+                .map((e) => widget.displayArabic == true ? e.nameAr : e.name)
+                .toList();
           } else {
             filteredList = widget.items
                 .where((element) {
                   return element.name
-                    .toString()
-                    .toLowerCase()
-                    .contains(textController.text.toLowerCase()) 
-                    || element.nameAr
-                    .toString()
-                    .toLowerCase()
-                    .contains(textController.text.toLowerCase());
-                }).map((e) => widget.displayArabic == true? e.nameAr : e.name).toList();
+                          .toString()
+                          .toLowerCase()
+                          .contains(textController.text.toLowerCase()) ||
+                      element.nameAr
+                          .toString()
+                          .toLowerCase()
+                          .contains(textController.text.toLowerCase());
+                })
+                .map((e) => widget.displayArabic == true ? e.nameAr : e.name)
+                .toList();
           }
         });
       });
@@ -196,7 +205,9 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                   margin: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     widget.title,
-                    style: widget.titleStyle ?? const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: widget.titleStyle ??
+                        const TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                 ),
                 IconButton(
@@ -271,7 +282,8 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                                 vertical: 10, horizontal: 18),
                             child: Text(
                               filteredList[index].toString(),
-                              style: widget.itemStyle ?? const TextStyle(fontSize: 14),
+                              style: widget.itemStyle ??
+                                  const TextStyle(fontSize: 14),
                             ),
                           ));
                     }),
