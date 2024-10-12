@@ -8,29 +8,29 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
   <tr>
     <td align="center">
       <br><br><br>
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif"  alt="Horizontal Layout" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/horizontal%20view.gif?raw=true"  alt="Horizontal Layout" width="240" />
       <br><b>Horizontal Layout</b>
     </td>
     <td align="center">
       <br><br><br>
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif"  alt="Show in Arabic Language" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif?raw=true"  alt="Show in Arabic Language" width="240" />
       <br><b>Show in Arabic Language</b>
     </td>
     <td align="center">
       <br><br><br>
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/vertical%20view.gif"  alt="Vertical Layout" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/vertical%20view.gif?raw=true"  alt="Vertical Layout" width="240" />
       <br><b>Vertical Layout</b>
     </td>
   </tr>
   <tr>
     <td align="center">
       <br><br><br>
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20State%20Only%20View.gif"  alt="Country  and State Only" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20State%20Only%20View.gif?raw=true"  alt="Country  and State Only" width="240" />
       <br><b>Country  and State Only</b>
     </td>
     <td align="center">
       <br><br><br>
-      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20Only%20View.gif"  alt="Country Only" width="240" />
+      <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/Country%20Only%20View.gif?raw=true"  alt="Country Only" width="240" />
       <br><b>Country Only</b>
     </td>
   </tr>
@@ -41,6 +41,9 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 ## New Features
 
 - **First package to support multilingual database:** The library provides a database for countries, states, and cities with support for multiple languages, including Arabic.
+<br><br>
+<img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif?raw=true"  alt="Show in Arabic Language" width="240" />
+<br><b>Show in Arabic Language</b><br><br>
 - **Display countries and states in two languages:** You can display countries and states in Arabic or English (or the native language if English is not available).
 - **Display cities in the native language:** The library allows displaying cities in the country's native language.
 - **Search in two languages:** You can search for countries and states either in Arabic or English, enhancing user experience.
