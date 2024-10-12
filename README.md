@@ -398,9 +398,9 @@ For any inquiries or questions, please feel free to contact me:
 
 **GitHub:** [Hezbr Al-humaidi](https://github.com/hezbr)
 
-**LinkedIn:** [Hezbr Al-humaidi](www.linkedin.com/in/hezbr)
+**LinkedIn:** [Hezbr Al-humaidi](https://www.linkedin.com/in/hezbr)
 
-
+<br>
 
 ### Special Thanks to
 - Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)
