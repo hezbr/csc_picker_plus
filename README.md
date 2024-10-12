@@ -44,6 +44,7 @@ A Flutter package for displaying a list of countries, states, and cities in Arab
 <br><br>
 <img src="https://github.com/hezbr/csc_picker_plus/blob/main/screenshots/arabic%20view.gif?raw=true"  alt="Show in Arabic Language" width="240" />
 <br><b>Show in Arabic Language</b><br><br>
+
 - **Display countries and states in two languages:** You can display countries and states in Arabic or English (or the native language if English is not available).
 - **Display cities in the native language:** The library allows displaying cities in the country's native language.
 - **Search in two languages:** You can search for countries and states either in Arabic or English, enhancing user experience.
