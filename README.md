@@ -1,5 +1,5 @@
 # csc_picker_plus 
-![version](https://img.shields.io/badge/version-0.0.3-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) 
+![version](https://img.shields.io/badge/version-0.0.3-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) ![version](https://img.shields.io/badge/WASM-True-red) 
 
 A Flutter package for displaying a list of countries, states, and cities in Arabic, English, or the native language based on selection. It also allows users to search for countries, states, and cities worldwide.
 
