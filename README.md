@@ -1,5 +1,5 @@
 # csc_picker_plus 
-![version](https://img.shields.io/badge/version-0.0.1-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) 
+![version](https://img.shields.io/badge/version-0.0.3-blue.svg)  ![version](https://img.shields.io/badge/NullSefety-True-brightgreen) 
 
 A Flutter package for displaying a list of countries, states, and cities in Arabic, English, or the native language based on selection. It also allows users to search for countries, states, and cities worldwide.
 
@@ -403,4 +403,4 @@ For any inquiries or questions, please feel free to contact me:
 <br>
 
 ### **Special Thanks to**
-- Altaf Razzaque, csc_picker [csc_picker](https://github.com/ltafc22/csc_picker)
+- Altaf Razzaque, csc_picker [csc_picker](https://github.com/altafc22/csc_picker)

@@ -1,6 +1,6 @@
 name: csc_picker_plus
 description: "A Flutter package to display and search countries, states, and cities in Arabic, English, or the native language worldwide."
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/hezbr/csc_picker_plus.git
 
 environment:
