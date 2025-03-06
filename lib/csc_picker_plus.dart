@@ -555,7 +555,7 @@ extension _PublicTranslator on String {
 
 class CSCPickerPlus extends StatefulWidget {
   /// CSC Picker Constructor
-  const CSCPickerPlus({
+  CSCPickerPlus({
     super.key,
     this.onCountryChanged,
     this.onStateChanged,
@@ -585,7 +585,18 @@ class CSCPickerPlus extends StatefulWidget {
     this.stateDropdownLabel = "State",
     this.cityDropdownLabel = "City",
     this.countryFilter,
-  });
+  }) {
+    assert(
+      !(disableCountry == true && defaultCountry == null),
+      'If disableCountry is true, you need to set a defaultCountry!',
+    );
+    // Runtime assertion that always executes, including release builds.
+    if (disableCountry == true && defaultCountry == null) {
+      throw ArgumentError(
+        'If disableCountry is true, you need to set a defaultCountry!',
+      );
+    }
+  }
 
   final ValueChanged<String>? onCountryChanged;
   final ValueChanged<String?>? onStateChanged;
@@ -600,7 +611,7 @@ class CSCPickerPlus extends StatefulWidget {
 
   final bool disableCountry;
 
-  ///Parameters to change style of CSC Picker
+  /// Parameters to change style of CSC Picker
   final TextStyle? selectedItemStyle, dropdownHeadingStyle, dropdownItemStyle;
   final BoxDecoration? dropdownDecoration, disabledDropdownDecoration;
   final bool showStates, showCities;
@@ -878,11 +889,17 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  countryDropdown(),
+                  // Hide country dropdown if disableCountry is true
+                  !widget.disableCountry ? countryDropdown() : Container(),
+
+                  /// If states are to be displayed, we add a space only if the country is present.
                   widget.showStates
-                      ? const SizedBox(height: 10.0)
+                      ? !widget.disableCountry
+                          ? const SizedBox(height: 10.0)
+                          : Container()
                       : Container(),
                   widget.showStates ? stateDropdown() : Container(),
+
                   widget.showStates && widget.showCities
                       ? const SizedBox(height: 10.0)
                       : Container(),
@@ -896,7 +913,18 @@ class CSCPickerPlusState extends State<CSCPickerPlus> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Expanded(child: countryDropdown()),
+                      // Hide country dropdown if disableCountry is true
+                      !widget.disableCountry
+                          ? Expanded(child: countryDropdown())
+                          : Container(),
+
+                      /// If states are to be displayed, we add a space only if the country is present.
+                      widget.showStates
+                          ? !widget.disableCountry
+                              ? const SizedBox(width: 10.0)
+                              : Container()
+                          : Container(),
+
                       widget.showStates
                           ? const SizedBox(width: 10.0)
                           : Container(),
